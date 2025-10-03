@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
@@ -24,7 +25,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${exo2.variable} antialiased`}>{children}</body>
+      <body className={`${exo2.variable} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
