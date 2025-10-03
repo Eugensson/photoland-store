@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+
 import "./globals.css";
 
 const exo2 = Exo_2({
@@ -26,7 +29,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${exo2.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
         <Analytics />
       </body>
     </html>

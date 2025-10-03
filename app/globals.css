@@ -14,7 +14,7 @@
   --breakpoint-lg: 960px;
   --breakpoint-xl: 1440px;
 
-  --background-image-mainSlider: url("/assets/pattern_bg.png");
+  --background-image-mainSlider: url("/assets/mainSlider_bg.png");
 }
 
 @layer utilities {
@@ -48,7 +48,7 @@ body {
 }
 
 .container {
-  @apply px-3.75 w-full max-w-327.5 mx-auto;
+  @apply px-3.75 w-full max-w-360 mx-auto;
 }
 
 .h2 {
@@ -60,11 +60,11 @@ body {
 }
 
 .btn {
-  @apply h-12.5 flex justify-center items-center rounded-lg px-10 py-2.5 text-sm uppercase font-bold;
+  @apply h-12.5 flex justify-center items-center rounded-lg px-10 py-2.5 text-sm uppercase font-bold transition-colors duration-300 cursor-pointer;
 }
 
 .btn-accent {
-  @apply bg-accent text-primary hover:bg-accent-hover transition-all;
+  @apply bg-accent text-primary hover:bg-accent-hover;
 }
 
 .input {
@@ -74,7 +74,6 @@ body {
 .mainSlider .swiper-pagination-bullets {
   bottom: 1.5rem;
 }
-
 .mainSlider .swiper-pagination-bullet,
 .productSlider .swiper-pagination-bullet {
   background: #f6cd46;
@@ -84,12 +83,11 @@ body {
   font-size: 2rem;
 }
 
-.productSlider .swiper-button-prev::after,
-.productSlider .swiper-button-next::after {
-  font-size: 2rem;
-  color: #f6cd46;
-  padding: 2rem;
-  width: 200px;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f6cd46 !important;
+  width: 3rem;
+  height: 3rem;
 }
 
 .custom-zoom [data-rmiz-modal-overlay],
