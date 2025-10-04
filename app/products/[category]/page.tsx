@@ -17,7 +17,7 @@ const CategoryProductsPage = async ({ params }: CategoryProductsPageProps) => {
   );
 
   return (
-    <section className="mb-16 pt-40 lg:pt-0">
+    <section className="mb-16 pt-40 lg:pt-7.5 xl:pt-0">
       <div className="container">
         <div className="flex gap-x-7.5">
           <CategoryNav />
