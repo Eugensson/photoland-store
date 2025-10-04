@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { RelatedProducts } from "@/components/related-products";
+import { AddToCartButton } from "@/components/add-to-cart-button";
 
 import { productList } from "@/lib/data";
 
@@ -45,9 +46,7 @@ const ProductDetailsPage = async ({ params }: ProductDetailsPageProps) => {
               <p className="text-3xl text-accent font-semibold">
                 ${product.price}
               </p>
-              <button type="button" className="btn btn-accent">
-                Add to cart
-              </button>
+              <AddToCartButton product={product} />
             </div>
           </div>
         </div>

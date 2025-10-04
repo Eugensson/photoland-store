@@ -14,3 +14,8 @@ export type Product = {
   price: number;
   isNew: boolean;
 };
+
+export type CartItemType = {
+  product: Product;
+  quantity: number;
+};
