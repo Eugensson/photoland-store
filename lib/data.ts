@@ -1,5 +1,12 @@
-import { Category, Product } from "@/types";
+import {
+  RiFacebookFill,
+  RiInstagramLine,
+  RiTwitterXLine,
+  RiYoutubeLine,
+} from "react-icons/ri";
+
 import cameraImg from "@/public/assets/camera.png";
+import { Category, Product, SocialDataType } from "@/types";
 
 export const productList: Product[] = [
   {
@@ -268,4 +275,33 @@ export const mainSliderData = [
     titlePart3: "Photo Gear",
     buttonText: "Shop Now",
   },
+];
+
+export const socialData: SocialDataType[] = [
+  {
+    label: "Youtube",
+    icon: RiYoutubeLine,
+    href: "https://www.youtube.com",
+  },
+  {
+    label: "Instagram",
+    icon: RiInstagramLine,
+    href: "https://www.instagram.com",
+  },
+  {
+    label: "TwitterX",
+    icon: RiTwitterXLine,
+    href: "https://x.com",
+  },
+  {
+    label: "Facebook",
+    icon: RiFacebookFill,
+    href: "https://www.facebook.com",
+  },
+];
+
+export const infoData = [
+  { label: "Returns policy", href: "/" },
+  { label: "Track your order", href: "/" },
+  { label: "Shipping & delivery", href: "/" },
 ];

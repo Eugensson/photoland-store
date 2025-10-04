@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export type Category =
   | "dslr"
   | "film"
@@ -18,4 +20,10 @@ export type Product = {
 export type CartItemType = {
   product: Product;
   quantity: number;
+};
+
+export type SocialDataType = {
+  label: string;
+  icon: IconType;
+  href: string;
 };
