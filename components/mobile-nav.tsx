@@ -6,18 +6,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { SlBag } from "react-icons/sl";
+import { FiMenu } from "react-icons/fi";
 
-export const Cart = () => {
+export const MobileNav = () => {
   return (
     <Sheet>
-      <SheetTrigger className="relative cursor-pointer">
-        <SlBag size={24} />
-        <div className="absolute top-3 -right-1 size-4.5 flex items-center justify-center bg-accent text-primary rounded-full text-[13px] font-semibold tracking-[-0.1em]">
-          5
-        </div>
+      <SheetTrigger className="xl:hidden cursor-pointer">
+        <FiMenu size={30} />
       </SheetTrigger>
-      <SheetContent>
+      <SheetContent side="left" className="p-8">
         <SheetHeader>
           <SheetTitle>Are you absolutely sure?</SheetTitle>
           <SheetDescription>

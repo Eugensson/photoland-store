@@ -68,7 +68,7 @@ body {
 }
 
 .input {
-  @apply h-12.5 rounded-lg w-full outline-none px-6 text-primary;
+  @apply h-12.5 rounded-lg w-full outline-none px-6 bg-white text-primary;
 }
 
 .mainSlider .swiper-pagination-bullets {
