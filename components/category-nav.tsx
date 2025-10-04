@@ -12,7 +12,7 @@ export const CategoryNav = () => {
         <ul className="p-6 flex flex-col gap-y-6">
           {categoryList.map((category) => (
             <li key={category}>
-              <Link href={`/products/category`} className="uppercase">
+              <Link href={`/products/${category}`} className="uppercase">
                 {category}
               </Link>
             </li>

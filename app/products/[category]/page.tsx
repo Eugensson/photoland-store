@@ -3,29 +3,27 @@ import { ProductCard } from "@/components/product-card";
 
 import { productList } from "@/lib/data";
 
-interface SearchPageProps {
-  searchParams: Promise<{
-    q: string;
+interface CategoryProductsPageProps {
+  params: Promise<{
+    category: string;
   }>;
 }
 
-const SearchPage = async ({ searchParams }: SearchPageProps) => {
-  const { q } = await searchParams;
+const CategoryProductsPage = async ({ params }: CategoryProductsPageProps) => {
+  const { category } = await params;
 
   const filteredProducts = productList.filter((product) =>
-    product?.name?.toLowerCase().includes(q?.toLowerCase())
+    product?.category?.toLowerCase().includes(category?.toLowerCase())
   );
 
   return (
-    <section className="mb-7.5 pt-40 lg:pt-0">
+    <section className="mb-16 pt-40 lg:pt-0">
       <div className="container">
         <div className="flex gap-x-7.5">
           <CategoryNav />
           <div>
             <h2 className="py-3 text-xl text-center lg:text-left uppercase">
-              {filteredProducts.length > 0
-                ? `${filteredProducts.length} results for ${q}`
-                : `no results found for ${q}`}
+              {category} cameras
             </h2>
             <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-7.5">
               {filteredProducts.map((product) => (
@@ -39,4 +37,4 @@ const SearchPage = async ({ searchParams }: SearchPageProps) => {
   );
 };
 
-export default SearchPage;
+export default CategoryProductsPage;
